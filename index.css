@@ -1,0 +1,83 @@
+body{
+    background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/153/580/original/pexels-julia-volk-5769308.jpg?1735389439://s3.amazonaws.com/shecodesio-production/uploads/files/000/153/579/original/background.jpg.jfif?1735387497);
+    background-size: cover;
+    background-position: center;
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;}
+
+#search {
+    background-color: #f9f7fe;
+    border: none;
+    color: rgba(39, 33, 66, 0.4);
+    font-size: 15px;
+    padding: 20px;
+    width: 80%;
+    border-radius: 8px;
+  }
+  
+  #submit {
+    font-size: 16px;
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 19px;
+    border-radius: 8px;
+    background-color: #4682BF;
+    color: white;
+    border: none;
+  }
+  a { color: #4682BF;
+font-weight: bold;
+cursor: pointer;
+display: inline;}
+
+footer{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.container {
+    background:#EBF4F6;
+    max-width: 600px;
+    margin: 60px auto; 
+    padding: 40px; 
+    border-radius: 10px; 
+    box-shadow: rgba(65, 50, 100, 0.08) 0px 30px 50px 0px;
+}
+
+h1 {
+  font-weight:800;
+  font-size: 35px;
+}
+p {
+  font-weight: lighter;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+strong {
+  color: #ec9119;
+}
+section {
+  display: flex;
+  justify-content: space-around; 
+  font-weight: 800;
+  font-size: 50px;
+  position: relative;
+  bottom:50px;
+}
+section small {
+  position: relative;
+margin-top:15px;
+    font-size: 28px;
+    opacity: 0.9; 
+    font-weight: 500;
+}
+.emoji {
+font-size: 36px;
+position: relative;
+margin-top:15px;
+}
+.weather-info { display: flex;
+justify-content: space-between;}
