@@ -2,18 +2,19 @@ function showTemp (response){
     let temperatureElement = document.querySelector("#weather-degree");
     let temperature = response.data.temperature.current;
     let cityElement = document.querySelector("#currentCity"); 
-    cityElement.innerHTML =  response.data.city;
-   temperatureElement.innerHTML= Math.round(temperature);
-   let descriptionElement = document.querySelector("#description"); 
+    let descriptionElement = document.querySelector("#description");
+    let humidityElement = document.querySelector("#humidity");
+    let speedElement = document.querySelector("#speed");
+    let timeElement = document.querySelector("#current-date");
+    let date = new Date(response.data.time*1000);
+    let iconElement = document.querySelector("#emoji");
+
+cityElement.innerHTML =  response.data.city;
+timeElement.innerHTML = formatDate(date);
    descriptionElement.innerHTML= response.data.condition.description;
-   let humidityElement = document.querySelector("#humidity"); 
    humidityElement.innerHTML= `${response.data.temperature.humidity}%`;
-   let speedElement = document.querySelector("#speed"); 
    speedElement.innerHTML= `${response.data.wind.speed}km/h`;
-   let timeElement = document.querySelector("#current-date"); 
-   let date = new Date(response.data.time * 1000);
-   timeElement.innerHTML = formatDate(date);
-   let iconElement = document.querySelector("#emoji"); 
+   temperatureElement.innerHTML= Math.round(temperature);
    iconElement.innerHTML =`<img src="${response.data.condition.icon_url}" class="iconImage"/>`;
 }
 
@@ -30,8 +31,8 @@ function formatDate(date){
         "Saturday",
       ];
     let day = days[date.getDay()];
-    if (minutes<10){minutes =`0${minutes}`}
-    return `${day} ${hours}:${minutes}`
+    if (minutes<10){minutes =`0${minutes}`;}
+    return `${day} ${hours}:${minutes}`;
 }
 
 
@@ -49,5 +50,6 @@ function searchCity (event) {
 
 let searchFormElement= document.querySelector("#city");
 searchFormElement.addEventListener("submit", searchCity);
+
 findCity("Kabul");
 
