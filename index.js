@@ -16,11 +16,12 @@ timeElement.innerHTML = formatDate(date);
    speedElement.innerHTML= `${response.data.wind.speed}km/h`;
    temperatureElement.innerHTML= Math.round(temperature);
    iconElement.innerHTML =`<img src="${response.data.condition.icon_url}" class="iconImage"/>`;
+   console.log(response.data);
 }
 
-function formatDate(date){
-    let minutes =date.getMinutes();
-    let hours =date.getHours();
+function formatDate(date) {
+    let minutes = date.getMinutes();
+    let hours = date.getHours();
     let days = [
         "Sunday",
         "Monday",
@@ -29,9 +30,9 @@ function formatDate(date){
         "Thursday",
         "Friday",
         "Saturday",
-      ];
+    ];
     let day = days[date.getDay()];
-    if (minutes<10){minutes =`0${minutes}`;}
+    if (minutes < 10) { minutes = `0${minutes}`; }
     return `${day} ${hours}:${minutes}`;
 }
 
