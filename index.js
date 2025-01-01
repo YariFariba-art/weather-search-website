@@ -13,6 +13,8 @@ function showTemp (response){
    let timeElement = document.querySelector("#current-date"); 
    let date = new Date(response.data.time * 1000);
    timeElement.innerHTML = formatDate(date);
+   let iconElement = document.querySelector("#emoji"); 
+   iconElement.innerHTML =`<img src="${response.data.condition.icon_url}" class="iconImage"/>`;
 }
 
 function formatDate(date){

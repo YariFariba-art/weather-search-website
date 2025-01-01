@@ -74,10 +74,14 @@ margin-top:15px;
     opacity: 0.9; 
     font-weight: 500;
 }
-.emoji {
-font-size: 36px;
+#emoji {
+width:44px;
+height: 44px;
 position: relative;
-margin-top:15px;
+margin-right: 55px;
+margin-bottom: 15px;
+margin-top: -8px;
+
 }
 .weather-info { display: flex;
 justify-content: space-between;}
