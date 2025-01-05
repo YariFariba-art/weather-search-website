@@ -77,8 +77,8 @@ margin-top:15px;
     font-weight: 500;
 }
 #emoji {
-width:44px;
-height: 44px;
+width:34px;
+height: 34px;
 position: relative;
 margin-right: 55px;
 margin-bottom: 15px;
@@ -104,8 +104,8 @@ justify-content: space-between;}
 }
 
 .weather-forecast-icon {
-  font-size: 38px;
-  text-align: center;
+  width: 85px;
+  height: 85px;
 }
 .weather-forecast-temperatures {
   text-align: center;
